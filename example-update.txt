@@ -1,0 +1,8 @@
+#SRUPDATE
+@@VERSION উদাহরণ আপডেট 1
+@@FILE index.html
+@@FIND
+<title>Data Show</title>
+@@REPLACE
+<title>Data Show</title>
+@@END

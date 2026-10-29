@@ -1,0 +1,7 @@
+#pSel,#pNew,#pMenu,#addB,#files{display:none!important}
+#stS{position:fixed;inset:0;z-index:9991;background:var(--bg,#f4f6fb);color:var(--tx,#111);display:none;flex-direction:column;padding-top:env(safe-area-inset-top)}
+#stS .tlh button{border:1px solid var(--bd,#ccc);background:var(--card,#fff);color:inherit;border-radius:10px;padding:8px 11px;font-size:.85rem}
+#stL{flex:1;overflow:auto;padding:6px 14px 30px}#stL h4{margin:14px 0 4px;font-size:.8rem;color:var(--mut,#778)}
+#stL label{display:flex;gap:10px;align-items:center;padding:9px 4px;border-bottom:1px solid var(--bd,#e3e3e3);font-size:.9rem}
+#stL label svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+#cust .tabs [data-t=app]{display:none!important}#stU{padding:10px 14px 0}#stU h4{margin:4px 0;font-size:.8rem;color:var(--mut,#778)}#stU .mut{font-size:.8rem;margin-bottom:8px}#stUp{border:0;background:#2f6fe4;color:#fff;border-radius:10px;padding:10px 16px;font-size:.9rem}

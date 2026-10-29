@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Default: HTTPS only. Cleartext allowed only for known local/dev hosts if ever needed. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <!-- DSE and a few Bangladeshi sites still serve some resources over HTTP on older paths -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">dsebd.org</domain>
+        <domain includeSubdomains="true">dse.com.bd</domain>
+        <domain includeSubdomains="true">cse.com.bd</domain>
+    </domain-config>
+</network-security-config>

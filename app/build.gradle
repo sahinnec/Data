@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.sharepricereader.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.sharepricereader.app"
+        minSdk 24
+        targetSdk 34
+        versionCode 3
+        versionName "3"
+    }
+
+    // সবসময় একই চাবি দিয়ে সই করা হয়, তাই নতুন APK আগেরটার ওপর install হয় (আনইনস্টল লাগে না)
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/LICENSE*', 'META-INF/NOTICE*', 'META-INF/DEPENDENCIES', 'META-INF/*.kotlin_module']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // WebView: stop the X-Requested-With header so Google/Claude/Grok sign-in is not blocked
+    implementation 'androidx.webkit:webkit:1.11.0'
+    // Gmail (IMAP) for the Table page "Import from Gmail"
+    implementation 'com.sun.mail:android-mail:1.6.7'
+    implementation 'com.sun.mail:android-activation:1.6.7'
+    // Google Sign-In + OAuth for Gmail (replaces App Password when signed in)
+    implementation 'com.google.android.gms:play-services-auth:21.2.0'
+}

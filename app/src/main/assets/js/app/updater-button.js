@@ -1,0 +1,1 @@
+(function(){const ok=!!(window.Android&&window.Android.openUpdater);document.getElementById('stNA').style.display=ok?'none':'block';document.getElementById('stUp').onclick=()=>{if(!ok){window.gnToast&&gnToast('Android app-e-i update kaj kore');return}try{window.Android.openUpdater()}catch(e){}}})();
